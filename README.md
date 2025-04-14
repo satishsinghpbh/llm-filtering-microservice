@@ -78,10 +78,10 @@ Service Layer converts filter model to JPA Specification.
 
 Repository builds dynamic query.
 
-DB2 queried for matching trades.
+Database queried for matching trades.
 
 🟫 5. Response Flow
-Data fetched from DB2.
+Data fetched from Database.
 
 Sent back to UI.
 
@@ -103,7 +103,7 @@ User ➝ Smart Search Input
          ⬅ Filter JSON ⬅
      ➝ AG Grid or Backend
          ➝ Spring Boot + JPA Spec
-             ➝ DB2
+             ➝ Database
          ⬅ Filtered Data ⬅
 ⬅ UI Shows Filtered Results
 ```
@@ -127,11 +127,11 @@ flowchart TD
     subgraph Backend[Spring Boot Service]
         C1(Receive Filter JSON)
         C2(Convert to JPA Specification)
-        C3(Execute DB2 Query)
+        C3(Execute Database Query)
         C4(Return Filtered Results)
     end
 
-    subgraph DB[DB2 Database]
+    subgraph DB[Database Database]
         D1(Trades Table)
     end
 
